@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eazy School</title>
+    <!-- LiveReload script for development -->
+    <script th:unless="${@environment.acceptsProfiles('prod', 'production')}">
+        (function() {
+            const script = document.createElement('script');
+            script.src = 'http://localhost:35729/livereload.js?snipver=1';
+            document.head.appendChild(script);
+            console.log('LiveReload script injected');
+        })();
+    </script>
+</head>
+<body>
+    <h1 th:text="'Hello, '+ ${username} + ' !!! Welcome to Eazy School.'"></h1>
+</body>
+</html>
